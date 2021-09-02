@@ -1,4 +1,4 @@
-const ApiURL = "http://api.github.com/users/",
+const ApiURL = "https://api.github.com/users/",
   main = document.getElementById("main"),
   form = document.getElementById("form"),
   toasts = document.querySelector(".toasts"),
