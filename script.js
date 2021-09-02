@@ -4,35 +4,35 @@ const ApiURL = "http://api.github.com/users/",
   toasts = document.querySelector(".toasts"),
   search = document.getElementById("search");
 
-// var x = 1;
-// if (x == 1) {
-//     const elon = document.createElement("div");
-//     elon.classList.add("toast");
-//     elon.classList.add('error');
-//     elon.innerText = `sichqonchani o'ng tomonini bosdingiz \n iltimos bu ishni qilmang. \n keyingi safar chiqarilib yuborilasiz!`;
+var x = 1;
+if (x == 1) {
+    const elon = document.createElement("div");
+    elon.classList.add("toast");
+    elon.classList.add('error');
+    elon.innerText = `sichqonchani o'ng tomonini bosdingiz \n iltimos bu ishni qilmang. \n keyingi safar chiqarilib yuborilasiz!`;
 
-//   window.oncontextmenu = function (e) {
-//     x++;
-//     if(x == 3){
-//      elon.innerText = 'uzr, sizni chiqarib yubordik. Xayr!';
-//      toasts.appendChild(elon);
-//      setTimeout(() => {
-//         elon.remove();
-//       }, 3000);
-//       e.preventDefault();
-//      return setTimeout(() => {
-//         window.close();
-//       }, 3300);
-//      }
-//      else {
-//          toasts.appendChild(elon);
-//          e.preventDefault();
-//      }
-//   };
-//   setTimeout(() => {
-//     elon.remove();
-//   }, 5000);
-// }
+  window.oncontextmenu = function (e) {
+    x++;
+    if(x == 3){
+     elon.innerText = 'uzr, sizni chiqarib yubordik. Xayr!';
+     toasts.appendChild(elon);
+     setTimeout(() => {
+        elon.remove();
+      }, 3000);
+      e.preventDefault();
+     return setTimeout(() => {
+        window.close();
+      }, 3300);
+     }
+     else {
+         toasts.appendChild(elon);
+         e.preventDefault();
+     }
+  };
+  setTimeout(() => {
+    elon.remove();
+  }, 5000);
+}
 
 async function getUser(userName) {
   try {
