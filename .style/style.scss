@@ -1,0 +1,198 @@
+@import "./colors/colors";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $kok;
+  color: $oq;
+  font-family: $font;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  height: 150vh;
+  overflow: auto;
+}
+.user-form {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  input {
+    width: 100%;
+    display: block;
+    background-color: $pushti;
+    border: none;
+    border-radius: 10px;
+    color: $oq;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    box-shadow: $shadow;
+  }
+  input:focus {
+    outline: none;
+  }
+  input::placeholder {
+    color: #bbb;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    overflow: auto;
+  }
+  .user-form {
+    max-width: 400px;
+  }
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.card {
+  max-width: 800px;
+  background-color: $pushti;
+  border-radius: 20px;
+  box-shadow: $shadow;
+  display: flex;
+  padding: 3rem;
+  margin: 0 1.5rem;
+}
+.avatar {
+  border-radius: 50%;
+  border: 1px solid $kok;
+  height: 150px;
+  width: 150px;
+}
+.user-info {
+  color: #eee;
+  margin-left: 2rem;
+  h2 {
+    margin-top: 0;
+  }
+  ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 4px;
+    justify-content: space-between;
+    max-width: 400px;
+    margin-bottom: 15px;
+    li {
+      display: flex;
+      align-items: center;
+      strong {
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+      }
+      span {
+        font-weight: bold;
+        font-size: 0.9rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+.location {
+  width: 300px;
+}
+.repo {
+  text-decoration: none;
+  color: $oq;
+  padding: 5px 10px;
+  background-color: $kok;
+  font-size: 0.7rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  border-radius: 10px;
+}
+.btn {
+  background-color: $oq;
+  color: $pushti;
+  font: {
+    family: inherit;
+    weight: bold;
+  }
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline;
+  text-align: center;
+  font-size: 16px;
+  width: 100%;
+  transition: $tvalue;
+  margin-bottom: 20px;
+  span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: $tvalue;
+  }
+  span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: $tvalue;
+  }
+}
+.container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    top: 10px!important;
+    bottom: 10px !important;
+    right: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+#toasts {
+    position: fixed;
+    bottom: 10px !important;
+    right: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    top: 10px!important;
+    
+}
+.toast {
+     background-color: $oq;
+     border-radius: 5px;
+     padding: 1rem 2rem;
+     margin: 0.5rem;
+}
+.toast.error {
+    $pushti: red;
+    color: $pushti;
+}
+
+
