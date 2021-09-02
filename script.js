@@ -12,6 +12,7 @@ if (x == 1) {
     elon.innerText = `sichqonchani o'ng tomonini bosdingiz \n iltimos bu ishni qilmang. \n keyingi safar chiqarilib yuborilasiz!`;
 
   window.oncontextmenu = function (e) {
+    e.preventDefault();
     x++;
     if(x == 3){
      elon.innerText = 'uzr, sizni chiqarib yubordik. Xayr!';
@@ -19,7 +20,6 @@ if (x == 1) {
      setTimeout(() => {
         elon.remove();
       }, 3000);
-      e.preventDefault();
      return setTimeout(() => {
         window.close();
       }, 3300);
