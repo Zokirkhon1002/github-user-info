@@ -21,7 +21,7 @@ if (x == 1) {
         elon.remove();
       }, 3000);
      return setTimeout(() => {
-        window.close();
+        window.close(e);
       }, 3300);
      }
      else {
